@@ -6,12 +6,14 @@ int main()
     long long n;
     cin >> n;
 
-    int last, count = 0, flag = 0;
-    int digit = log(10 * (n + 1));
+    long long last = 0;
+    int count = 0, flag = 0;
+    long long digit = log(10 * (n + 1));
     for (int i = 0; i < digit; i++)
     {
-        cout << n << "-->" << last << "-->" <<count << "-->" <<flag << endl;
+        // cout << n << "-->" << last << "-->" <<count << "-->" <<flag << endl;
         last = n % 10;
+        // cout << last;
         if (last == 4 || last == 7)
         {
             n/=10;
@@ -23,12 +25,12 @@ int main()
             if (count == 7 || count == 4)
             {
                 flag = 1;
-                // n/=10;
+                 n/=10;
             }
             else
             {
                 flag = 0;
-                // n/=10;
+                 n/=10;
             }
             n/=10;
         }
@@ -42,7 +44,7 @@ int main()
     {
         cout << "NO";
     }
-    
+    // cout <<endl <<  n << "-->" << last << "-->" <<count << "-->" <<flag << endl;
 
     return 0;
 }
