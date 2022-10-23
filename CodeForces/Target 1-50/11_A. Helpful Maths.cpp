@@ -7,7 +7,8 @@ int main()
     cin >> sy;
 
     sort(sy.begin(), sy.end(), greater<char>());
-    // cout <<sy;
+    // cout <<sy;ahhellllloou
+
 
     int n = sy.size();
     if (n % 2 != 0)
