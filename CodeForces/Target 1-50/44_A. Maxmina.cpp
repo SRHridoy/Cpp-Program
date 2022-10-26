@@ -6,19 +6,33 @@ int main()
     int t;
     cin >> t;
 
-    int n, k;
-
-    for (int i = 0; i < t; i++)
+    while (t--)
     {
+        int n, k, count = 0;
         cin >> n >> k;
 
         int a[n];
-        for (int j = 0; j < n; j++)
+
+        for (int i = 0; i < n; i++)
         {
-            cin >> a[j];
+            cin >> a[i];
         }
 
-        
+        for (int i = 0; i < n; i++)
+        {
+            if (a[i] == 1)
+            {
+                count++;
+                break;
+            }
+        }
+
+        if (count)
+        {
+            cout << "YES" << endl;
+        }
+        else
+            cout << "NO" << endl;
     }
 
     return 0;
