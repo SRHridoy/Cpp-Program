@@ -1,13 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printVec(vector<int> v)
+void printVec(vector<int> &v)
 {
     cout << "SIZE-->" << v.size() << endl;
     for (int i = 0; i < v.size(); i++)
     {
         cout << v[i] << " ";
     }
+    v.push_back(2);
     cout << endl;
     
 }
@@ -36,13 +37,14 @@ int main()
     vector<int> v;
     v.push_back(7); 
     v.push_back(6);
-    printVec(v);
+    // printVec(v);
     // v.pop_back();
     // printVec(v);
 
     //Copy of vector-->
-    vector<int> v2 = v;
+    vector<int> &v2 = v;//O(n)
     v2.push_back(5);
+    printVec(v);
     printVec(v);
     printVec(v2);
 
