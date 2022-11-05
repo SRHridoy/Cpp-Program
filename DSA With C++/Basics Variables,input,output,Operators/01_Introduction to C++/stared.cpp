@@ -5,8 +5,11 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
-    //This is all about Defination and neccessity of Programming.
+    cout.tie(NULL);
+
+
+    //Allah Help me to Complete it...
+
 
     return 0;
 }
