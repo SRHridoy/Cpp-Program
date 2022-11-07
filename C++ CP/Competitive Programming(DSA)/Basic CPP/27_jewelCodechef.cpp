@@ -8,22 +8,25 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		string j, s;
-		cin >> j >> s;
+		string jewel, stone;
+		cin >> jewel >> stone;
 		// cout << j << s;
-
-		sort(j.begin(),j.end());
-		sort(s.begin(),s.end());
-
-		int i = 0;
-		int cnt = 0;
-		while(s[i]==j[i])
+		set<char>s;
+		for (int i = 0; i < jewel.size(); i++)
 		{
-			cnt++;
-			i++;
+			s.insert(jewel[i]);
 		}
-		cout << i << endl;
-		/*cout << s << j;*/
+		int cnt = 0;
+		for (int i = 0; i < stone.size(); i++)
+		{
+			if (s.find(stone[i])!=s.end())
+			{
+				cnt++;
+			}
+			
+		}
+		
+		cout << cnt << endl;
 	}
 
 
