@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#define ll long long int
+#define nl "\n"
 using namespace std;
 
 int main()
@@ -8,17 +10,16 @@ int main()
     cout.tie(NULL);
 
 
-    int t;
-    cin >> t;
-    while (t--)
+    int i = 5;
+    while (true)
     {
-        string s;
-        cin >> s;
-        for (int i = 0; i < s.size()/2; i+=2)
+        if (i%7==0)
         {
-            cout << s[i];
+            cout << i << nl;
+            break;
         }
-        cout << endl;
+        i+=5;
     }
+
     return 0;
 }
