@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#define ll long long int
 using namespace std;
 
 int main()
@@ -8,8 +9,14 @@ int main()
     cout.tie(NULL);
 
 
-    string s;
-    cin >> s;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        cout << n/2 << "\n";
+    }
     
 
 

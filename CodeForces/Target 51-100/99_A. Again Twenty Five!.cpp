@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#define ll long long int
 using namespace std;
 
 int main()
@@ -8,9 +9,9 @@ int main()
     cout.tie(NULL);
 
 
-
-    cout << lcm(2,5) << endl;
-
-
+    ll n;
+    cin >> n;
+    cout << "25\n";
+    
     return 0;
 }
