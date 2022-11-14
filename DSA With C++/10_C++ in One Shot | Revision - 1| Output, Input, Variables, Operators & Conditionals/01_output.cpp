@@ -5,9 +5,9 @@ using namespace std;
 
 void solve()
 {
-    ll n;
-    cin >> n;
-    cout << (n+1)/2 << endl;
+    //cout --> character output
+    //<< --> insertin Operator
+    cout << "Hello World!" << endl;
 }
 
 int main()
@@ -17,9 +17,9 @@ int main()
     cout.tie(0);
 
     int t;
-    // t = 1;
+    t = 1;
     //int cs = 1;
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";
