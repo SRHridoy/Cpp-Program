@@ -10,7 +10,7 @@ int main()
 
     int num1 = 6;
     int num2 = 3;
-
+//+= is faster...
     num1+=3;
     cout << num1 << endl;
     num2-=2;
