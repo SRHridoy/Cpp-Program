@@ -18,7 +18,7 @@ int main()
     while (i<=n)
     {
         sum+=i;
-        i++
+        i++;
     }
     cout << sum << "\n";
 

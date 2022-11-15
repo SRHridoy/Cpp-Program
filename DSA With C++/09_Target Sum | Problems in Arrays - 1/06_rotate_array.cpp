@@ -11,7 +11,7 @@ void solve()
     int n = 5;
     int k = 3;
 
-    //k can be greater than zero-->
+    //k can be greater than n-->
     k%=n;
 
     int rotatedArray[n];
