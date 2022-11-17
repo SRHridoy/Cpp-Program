@@ -14,7 +14,7 @@ void solve()
     if(a==b)
         cout << 0 << endl;
     else if(a<b)
-        cout << 
+        cout <<  .v
 }
 
 int32_t main()
