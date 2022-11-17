@@ -7,14 +7,26 @@
 #define endl              '\n'
 using namespace std;
 
+int square(int x)
+{
+    return x * x;
+}
+
+double circumference(int r)
+{
+    return 2*3.1416*r;
+}
+
+double area(int r)
+{
+    return 3.1416*square(r);
+}
+
 void solve()
 {
-    int a ,b;
-    cin >> a >> b;
-    if(a==b)
-        cout << 0 << endl;
-    else if(a<b)
-        cout <<  .v
+    int r = 3;
+    cout << area(r) << " " << circumference(r) << endl;
+
 }
 
 int32_t main()
@@ -24,9 +36,9 @@ int32_t main()
     cout.tie(NULL);
 
     int t;
-    // t = 1;
+    t = 1;
     //int cs = 1;
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";
