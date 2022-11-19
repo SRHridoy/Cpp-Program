@@ -1,3 +1,10 @@
+//          ***Md Sohanur Rahman Hridoy***
+
+//In the name of ALLAH, the Most Gracious, the Most Merciful...
+
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize("O3,unroll-loops")
+
 #include<bits/stdc++.h>
 #define int               long long
 #define pb                push_back
@@ -9,25 +16,17 @@ using namespace std;
 
 void solve()
 {
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
+    string fullString;
+    for (int i = 0; i < 19; ++i)
+        fullString += "Yes";
+    
     string s;
     cin >> s;
-
-    int cnt = 0;
-    for (int i = 0; i < s.size(); i++)
-    {
-        if(s[i]=='1')
-            cnt+=a;
-        else if(s[i]=='2')
-            cnt+=b;
-        else if(s[i]=='3')
-            cnt+=c;
-        else if(s[i]=='4')
-            cnt+=d;
-    }
-    cout << cnt << endl;
-    
+    bool paiciKhuje = (fullString.find(s) != string::npos);
+    if(paiciKhuje)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 }
 
 int32_t main()
@@ -39,7 +38,7 @@ int32_t main()
     int t;
     t = 1;
     //int cs = 1;
-    //cin >> t;
+    cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";

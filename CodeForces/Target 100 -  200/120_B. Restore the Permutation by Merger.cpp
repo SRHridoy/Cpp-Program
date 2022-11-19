@@ -9,25 +9,24 @@ using namespace std;
 
 void solve()
 {
-    int a,b,c,d;
-    cin >> a >> b >> c >> d;
-    string s;
-    cin >> s;
-
-    int cnt = 0;
-    for (int i = 0; i < s.size(); i++)
+    int n;
+    cin >> n;
+    set<int>per;
+    vector<int>ans;
+    for (int i = 0; i < 2*n; i++)
     {
-        if(s[i]=='1')
-            cnt+=a;
-        else if(s[i]=='2')
-            cnt+=b;
-        else if(s[i]=='3')
-            cnt+=c;
-        else if(s[i]=='4')
-            cnt+=d;
+        int x;
+        cin >> x;
+        if(per.find(x)==per.end())
+        {
+            per.insert(x);
+            ans.pb(x);
+        }
     }
-    cout << cnt << endl;
-    
+    for(auto it:ans)
+        cout << it << " ";
+    cout << endl;
+
 }
 
 int32_t main()
@@ -37,9 +36,9 @@ int32_t main()
     cout.tie(NULL);
 
     int t;
-    t = 1;
+    // t = 1;
     //int cs = 1;
-    //cin >> t;
+    cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";
