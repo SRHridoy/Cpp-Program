@@ -23,11 +23,11 @@ int main ()
     int arr[n];
     for(int i = 0; i < n; i++) cin >> arr[i];
     //for maximum element-->
-    int maxi = *max_element(a,a+5);
+    int maxi = *max_element(arr,arr+5);
     cout << maxi << endl;
 
     //for minimum element-->
-    int mini = *min_element(a,a+5);
+    int mini = *min_element(arr,arr+5);
     cout << mini << endl;
 
     vector<int>v(5,0);
