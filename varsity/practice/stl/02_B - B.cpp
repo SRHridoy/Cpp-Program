@@ -1,4 +1,4 @@
-//          ***Md Sohanur Rahman Hridoy*** ​
+//       *Author: Md Sohanur Rahman Hridoy* ​
 
 //In the name of ALLAH, the Most Gracious, the Most Merciful...
 
@@ -7,7 +7,7 @@
 
 #include<bits/stdc++.h>
 #define int               long long
-#define pb                emplace_back
+#define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
 #define ppf               pop_front
@@ -16,31 +16,24 @@ using namespace std;
 
 void solve()
 {
-    int n,k;
-    cin >> n >> k;
-
-    int timeAce = 240;
-    int safeTime = 240 - k;
-    // cout << safeTime << endl;
-
-    int solved= 0;
-    int solvingTime = 0;
-    while (true)
-    {
-        solvingTime+=(5*(solved+1));
-        // cout << solvingTime << endl;
-        if(solved == n)
-        {
-            break;
+    int N, q, query, t, x;
+    cin >> N >> q;
+    vector<vector<int> > c(N, vector<int>(0));
+    for (int i = 0; i < q; ++i) {
+        cin >> query >> t;
+        if (query == 0) {
+            cin >> x;
+            c[t].push_back(x);
+        } else if (query == 1) {
+            for(int j = 0; j < c[t].size(); ++j) {
+                cout << c[t][j] << (j + 1 == c[t].size() ? "" : " ");;
+            }
+            cout << endl;
+        } else {
+            c[t].clear();            
         }
-        if(solvingTime<=safeTime)
-        {
-            solved++;
-        }
-        else
-        break;
     }
-    cout << solved << endl;
+    
 }
 
 int32_t main()
@@ -52,7 +45,7 @@ int32_t main()
     int t;
     t = 1;
     //int cs = 1;
-    // cin >> t;
+    //cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";

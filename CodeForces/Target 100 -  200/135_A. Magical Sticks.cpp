@@ -16,31 +16,11 @@ using namespace std;
 
 void solve()
 {
-    int n,k;
-    cin >> n >> k;
+    int n;
+    cin >> n;
 
-    int timeAce = 240;
-    int safeTime = 240 - k;
-    // cout << safeTime << endl;
-
-    int solved= 0;
-    int solvingTime = 0;
-    while (true)
-    {
-        solvingTime+=(5*(solved+1));
-        // cout << solvingTime << endl;
-        if(solved == n)
-        {
-            break;
-        }
-        if(solvingTime<=safeTime)
-        {
-            solved++;
-        }
-        else
-        break;
-    }
-    cout << solved << endl;
+    cout << (int)ceil(n/2.0) << endl;
+    
 }
 
 int32_t main()
@@ -50,9 +30,9 @@ int32_t main()
     cout.tie(NULL);
 
     int t;
-    t = 1;
+    // t = 1;
     //int cs = 1;
-    // cin >> t;
+    cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";

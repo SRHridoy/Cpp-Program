@@ -16,31 +16,28 @@ using namespace std;
 
 void solve()
 {
-    int n,k;
-    cin >> n >> k;
-
-    int timeAce = 240;
-    int safeTime = 240 - k;
-    // cout << safeTime << endl;
-
-    int solved= 0;
-    int solvingTime = 0;
-    while (true)
+    int n;
+    cin >> n;
+    vector<int>v;
+    for (int i = 0; i < n; i++)
     {
-        solvingTime+=(5*(solved+1));
-        // cout << solvingTime << endl;
-        if(solved == n)
-        {
-            break;
-        }
-        if(solvingTime<=safeTime)
-        {
-            solved++;
-        }
-        else
-        break;
+        int in;
+        cin >> in;
+        v.pb(in);
     }
-    cout << solved << endl;
+    
+    int pos = 0;
+    int neg = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if(v[i]>0)
+            pos+=v[i];
+        else
+            neg+=v[i];
+    }
+    cout << pos-(neg) << endl;
+    
+    
 }
 
 int32_t main()
@@ -52,7 +49,7 @@ int32_t main()
     int t;
     t = 1;
     //int cs = 1;
-    // cin >> t;
+    //cin >> t;
     while (t--)
     {
         //cout << "Case-#" << cs <<": ";
