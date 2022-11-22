@@ -1,4 +1,4 @@
-//          ***Md Sohanur Rahman Hridoy*** ​
+//       *Author: Md Sohanur Rahman Hridoy* ​
 
 //In the name of ALLAH, the Most Gracious, the Most Merciful...
 
@@ -7,7 +7,7 @@
 
 #include<bits/stdc++.h>
 #define int               long long
-#define pb                emplace_back
+#define pb                push_back
 #define ppb               pop_back
 #define pf                push_front
 #define ppf               pop_front
@@ -16,33 +16,24 @@ using namespace std;
 
 void solve()
 {
-    int n,k;
-    cin >> n >> k;
-
-    int timeAce = 240;
-    int safeTime = 240 - k;
-    // cout << safeTime << endl;
-
-    int solved= 0;
-    int solvingTime = 0;
-    while (true)
+    int n;
+    cin >> n;
+    vector<int>ii;
+    for (int i = 0; i < n; i++)
     {
-        solvingTime+=(5*(solved+1));
-        // cout << solvingTime << endl;
-        if(solved == n)
-        {
-            break;
-        }
-        if(solvingTime<=safeTime)
-        {
-            solved++;
-        }
+        int a,b;
+        if(cin >> a && a==2)
+            ii.ppb();
         else
-        break;
+        {
+            cin >> b;
+            if(a==1)
+                cout << ii[b] << endl;
+            else
+                ii.pb(b);
+        }
     }
-    cout << solved << endl;
 }
-
 int32_t main()
 {
     ios_base::sync_with_stdio(false);
