@@ -13,6 +13,7 @@ int main()
 
     cout << (exp1 && exp2) << endl;
     cout << (exp1 || exp2) << endl;
+    cout << (!exp1) << endl;
 
 
     return 0;
