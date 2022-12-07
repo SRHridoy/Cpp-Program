@@ -17,18 +17,18 @@
 using namespace std;
 
 void solve(){
-    string s;
-        cin >> s;
-        // int n=s.size();
-        int sumF = 0, sumL = 0;
-        for (int i = 0; i < 3; i++)
-            sumF += s[i];
-        for (int i = 3; i < 6; i++)
-            sumL += s[i];
-        if (sumF == sumL)
-            cout << "YES" << endl;
-        else
-            cout << "NO" << endl;
+    int n; cin >> n;
+    vector<int>v;
+    fo(i,n){
+        int x; cin >> x;
+        v.pb(x);
+    } bool hobe_ki = true;
+    fo(i,n){
+        if(i-2>-1 and v[i] % 2!= v[i-2]%2){
+            hobe_ki = false;
+            break;
+        }
+    }hobe_ki?cout << "YES" << endl:cout <<"NO" << endl;
 }
 
 int32_t main(){
