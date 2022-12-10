@@ -1,3 +1,0 @@
-int m,n;
-int *p1,*p2;
-m = *p1 + *p2++;//-->p1 and p2 is uninitialized...So, dereferncing and assiging to m cause an error...
