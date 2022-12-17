@@ -22,14 +22,16 @@ void solve(){
     fo(i,n){
         int x; cin >> x;
         v.pb(x);
-    }sort(v.begin(),v.end());
-    int hri = *v.begin();
+    }sort(v.begin()+1,v.end());
     Fo(i,1,n){
-        if(hri<v[i]){
-            int x = (v[i]+1-hri)/2;
-            hri +=x;
+        if(v[i]>v[0]){
+            if((v[i]+v[0]) % 2 == 0){
+                v[0] = (v[i]+v[0])/2;
+            }else{
+                v[0] = (v[i]+v[0])/2 + 1;
+            }
         }
-    }cout << hri << endl;
+    }cout << v[0] << endl;
 
 }
 
