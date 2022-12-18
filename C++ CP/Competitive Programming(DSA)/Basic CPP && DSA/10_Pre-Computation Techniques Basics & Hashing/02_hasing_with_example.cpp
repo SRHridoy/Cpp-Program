@@ -1,9 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-const int N = 1e7 +10;
-int hsh[N];
-int main()
-{
 /*Given array a of N integers. Given Q queries and in each query a number X, print count of that number in array.
 
 Constraints
@@ -11,6 +5,12 @@ Constraints
 1 <= a[i] <= 10^7
 1 <= Q <= a0^5
 *///-----------------------> O(N)
+#include<bits/stdc++.h>
+using namespace std;
+const int N = 1e7 +10;
+int hsh[N];
+int main()
+{
     int n;
     cin >> n;
     int a[n];

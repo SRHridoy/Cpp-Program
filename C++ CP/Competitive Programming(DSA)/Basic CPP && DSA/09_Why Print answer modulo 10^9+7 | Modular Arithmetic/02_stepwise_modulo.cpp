@@ -8,7 +8,7 @@ int main()
     1 <= N <= 100
 
     Print answer module M
-    where M = 47 --> ans always M er chotot hobe
+    where M = 47 --> ans always M er choto hobe
 
 */    
 

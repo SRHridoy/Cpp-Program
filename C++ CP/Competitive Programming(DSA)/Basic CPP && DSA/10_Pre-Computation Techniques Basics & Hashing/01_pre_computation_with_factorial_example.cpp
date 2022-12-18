@@ -1,5 +1,5 @@
 /*
-Given T test cases and in eaach test case a number N.Print its factorial for each test case % M
+Given T test cases and in each test case a number N.Print its factorial for each test case % M
 where M = 10^9+7
 
 Constraints
