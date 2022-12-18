@@ -1,5 +1,5 @@
 /*
-Given 2D array a of N*N integers. Given Q queries and in each query given a, b, c and d print sum of square represented by (a, b) as top lest point and (c, d) as top bottom right point.
+Given 2D array a of N*N integers. Given Q queries and in each query given a, b, c and d print sum of square represented by (a, b) as top lest point and (c, d) as bottom right point.
 
 Constraints:
 1 <= N <= 10^3
