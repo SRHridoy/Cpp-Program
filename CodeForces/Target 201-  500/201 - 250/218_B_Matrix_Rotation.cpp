@@ -17,21 +17,19 @@
 using namespace std;
 
 void solve(){
-    int m11,m12,m21,m22;
-    cin >> m11 >> m12 >> m21 >> m22;
-    int n11, n12,n21,n22;
-    if((m11<m21) && (m11 < m12) && (m12 <m22) && (m21 < m22)){
+    vector<int>v;
+    fo(i,4){
+        int x; cin >> x;
+        v.pb(x);
+    }
+    int maxPos = max_element(v.begin(),v.end()) - v.begin();
+    int minPos = min_element(v.begin(),v.end()) - v.begin();
+    if(maxPos+minPos == 3){
         cout << "YES" << endl;
     }else{
-        n11 = m21;n12 = m11;n21 = m22;n22 = m12;
-        cout << n11 << " " << n12 << endl << n21 << " " << n22 << endl;
-        ((n11<n21) && (n11 < n12) && (n12 <n22) && (n21 < n22)){
-            cout << "YES" << endl;
-        }else{
-            cout << "NO" << endl;
-        }
-
+        cout << "NO" << endl;
     }
+
 }
 
 int32_t main(){
