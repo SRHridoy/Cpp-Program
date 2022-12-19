@@ -21,17 +21,17 @@ void solve(){
     if(n%2!=0){
         cout << -1 << endl;
     }else{
-        vector<int>v;
+        vector<int>v(110);
         fo(i,n){
-            v[i] = i;
-        }
-        fo(i,n){
-            swap(v[i],v[i+1]);
-            i++;
+            if(i%2==0){
+                v[i] = i+2;
+            }else{
+                v[i] = i;
+            }
         }
         fo(i,n){
             cout << v[i] << " ";
-        }cout <<endl; 
+        }
     }
 }
 
@@ -41,9 +41,9 @@ int32_t main(){
     cout.tie(NULL);
 
     int t;
-    //t = 1;
+    t = 1;
     //int cs = 1;
-    cin >> t;
+    //cin >> t;
     while (t--){
         //cout << "Case-#" << cs <<": ";
         solve();
