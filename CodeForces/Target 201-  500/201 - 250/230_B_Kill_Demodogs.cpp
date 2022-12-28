@@ -1,54 +1,56 @@
-//       *Author: Md Sohanur Rahman Hridoy* ​
-
-//In the name of ALLAH, the Most Gracious, the Most Merciful...
-
-#pragma GCC optimize("Ofast")
-#pragma GCC optimize("O3,unroll-loops")
-
-#include"bits/stdc++.h"
-#define int               long long
-#define pb                push_back
-#define ppb               pop_back
-#define pf                push_front
-#define ppf               pop_front
-#define endl              '\n'
-#define all(v)            v.begin(),v.end()
-#define fo(i, n)          for(int i = 0; i < n; i++)
-#define Fo(i,k,n)         for(int i = k;k<n?i<n:i>n;k<n?i++:i--)
+#include <bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define mod 1000000007
+ll modexp(ll a, ll b);
+ll sum_square(ll n)
+{
+    ll ans = (((n * (n + 1)) % mod) * (2 * n + 1) % mod) % mod;
+    ;
+    ans = (ans * modexp(6, mod - 2)) % mod;
 
-void solve(){
-    int n; cin >> n;
-    int arr[n+1][n+1];
-    int ans = 0;
-    int totalDemoDogs = 0;
-    Fo(i,1,n+1){
-        Fo(j,1,n+1){
-            // totalDemoDogs = i*j;
-            // arr[i][j] = totalDemoDogs;
-            if(i==j or ((i-j)==1)){
-                totalDemoDogs += i*j;
-            }else{
-                continue;
-            }
-        }
-    }
-    ans = (totalDemoDogs*2022)%1000000007;
-    cout << ans << endl;
+    return ans;
 }
+ll sum_linear(ll n)
+{
+    ll ans = (n * (n + 1)) % mod;
+    ans = (ans * modexp(2, mod - 2)) % mod;
 
-int32_t main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    return ans;
+}
+ll modexp(ll a, ll b)
+{
+    ll ans = 1;
 
-    int t;
-    //t = 1;
-    //int cs = 1;
+    while (b > 0)
+    {
+        if ((b % 2) == 1)
+        {
+            ans = (ans * a) % mod;
+        }
+        a = (a * a) % mod;
+        b /= 2;
+    }
+
+    return ans;
+}
+int main()
+{
+    ll t, n, ans, i;
+
     cin >> t;
-    while (t--){
-        //cout << "Case-#" << cs <<": ";
-        solve();
-        //cs++;
+
+    for (; t--;)
+    {
+        cin >> n;
+
+        ans = 0;
+
+        ans = (ans + sum_square(n)) % mod;
+        ans = (ans + sum_square(n - 1)) % mod;
+        ans = (ans + sum_linear(n - 1)) % mod;
+        ans = (ans * 2022) % mod;
+
+        cout << ans << "\n";
     }
 }
