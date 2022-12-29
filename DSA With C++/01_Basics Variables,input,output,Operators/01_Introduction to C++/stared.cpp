@@ -8,8 +8,8 @@ int main()
     cout.tie(NULL);
 
 
-    //Allah Help me to Complete it...
-
+    //Allah Please, Help me to Complete it...
+    
 
     return 0;
 }

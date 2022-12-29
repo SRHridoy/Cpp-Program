@@ -18,9 +18,26 @@
 using namespace std;
 
 void solve(){
-    int n, k; cin >> n >> k;
-    vector<int>v(n);
-    fo(i,n) cin >> v[i];
+    int n; cin >> n;
+    typedef pair<string,string> pairOfStrings;
+/* ----------USING VECTOR OF PAIRS---------- */
+    // vector<pairOfStrings>vps(n);
+    // fo(i,n){
+    //     cin >> vps[i].first >> vps[i].second;
+    // }sort(all(vps));
+    // /* for(auto it:vps){
+    //     cout << it.first << " "  << it.second << endl;;
+    // }cout << endl; */
+    // int ans = unique(all(vps)) - vps.begin();
+    // cout << ans << endl;
+
+/* ---------USING SET OF PAIRS----------- */
+    set<pairOfStrings>s;
+    string s1, s2;
+    fo(i,n){
+        cin >> s1 >> s2;
+        s.insert(make_pair(s1,s2));
+    }cout << s.size() << endl;
 }
 
 int32_t main(){
@@ -29,9 +46,9 @@ int32_t main(){
     cout.tie(NULL);
 
     int t;
-    //t = 1;
+    t = 1;
     //int cs = 1;
-    cin >> t;
+    // cin >> t;
     while (t--){
         //cout << "Case-#" << cs <<": ";
         solve();

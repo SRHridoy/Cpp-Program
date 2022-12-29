@@ -7,7 +7,8 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-
+/*----------MULTILLILNE COMMENTS---------- */
+//----------SINGLELINE COMMENTS-----------
     cout << "Hello World!" << endl;
     cout << "Hello" << endl << "World!" << endl;
 
