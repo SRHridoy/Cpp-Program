@@ -7,12 +7,11 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-
+/* ---------- >> EXTRACTION OPERATOR---------- */
     int apples;
     cin >> apples;
 
     cout << "Number of apples: " << apples <<endl;
-
 
     return 0;
 }
