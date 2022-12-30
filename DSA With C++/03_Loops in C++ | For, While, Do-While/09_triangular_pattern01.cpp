@@ -1,28 +1,11 @@
-#include<bits/stdc++.h>
-#define ll long long int
-#define nl "\n"
+#include<iostream>
 using namespace std;
-
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-
-    int n;
-    cin >> n;
-
-    for (int i = 1; i <= n; i++)
-    {
-        for(int j = 1; j <= (n-i+1); j++)
-        {
+int main(){
+    int row;
+    cin >> row;
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j <= (row - i + 1); j++){
             cout << "*";
-        }
-        cout << nl;
+        }cout <<endl;
     }
-    
-
-
-    return 0;
 }
