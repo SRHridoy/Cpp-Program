@@ -4,7 +4,7 @@
 //1 <= T <= 100000
 //1 <= N <= 100000
 //1 <= a[i] <= 1000
-//sum of N over all  Test cases is < 10^7-->eta bolle O(N) ba bolle -->O(T*N)-->O(N^2)
+//sum of N over all  Test cases is < 10^7-->eta bolle O(N), na bolle -->O(T*N)-->O(N^2)
 using namespace std;
 int main()
 {
@@ -23,7 +23,7 @@ int main()
             sum+=x;
             cnt++;
         }
-        
+        cout << sum <<endl;
     }
     
 

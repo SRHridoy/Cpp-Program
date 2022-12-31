@@ -18,18 +18,16 @@
 using namespace std;
 
 void solve(){
-    int n, k, t;
-    cin >> n >> k >> t;
-    int z = t/k;
-    if(z>n){
-        cout << (n-1) * (n)/2 << endl;
-    }else{
-        int ans = z*n;
-        ans -= (z)*(z+1)/2;
-        cout << ans <<endl;
-    }
+    int n, m; cin >> n >> m;
+    vector<int>v(n+m); fo(i,n+m) cin >> v[i];
+    sort(all(v)-1);
+    reverse(all(v));
+    // fo(i,n+m)cout << v[i] << " ";
+    // cout << endl;
+    int sum = 0;
+    fo(i,n) sum+=v[i];
+    cout << sum << endl;
 }
-
 int32_t main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

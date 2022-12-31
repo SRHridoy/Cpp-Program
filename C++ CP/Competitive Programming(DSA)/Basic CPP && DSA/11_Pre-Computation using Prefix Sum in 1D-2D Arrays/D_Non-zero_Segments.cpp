@@ -18,16 +18,10 @@
 using namespace std;
 
 void solve(){
-    int n, k, t;
-    cin >> n >> k >> t;
-    int z = t/k;
-    if(z>n){
-        cout << (n-1) * (n)/2 << endl;
-    }else{
-        int ans = z*n;
-        ans -= (z)*(z+1)/2;
-        cout << ans <<endl;
-    }
+    int n; cin >> n;
+    vector<int>v(n);
+    fo(i,n) cin >> v[i];
+    
 }
 
 int32_t main(){
@@ -36,9 +30,9 @@ int32_t main(){
     cout.tie(NULL);
 
     int t;
-    //t = 1;
+    t = 1;
     //int cs = 1;
-    cin >> t;
+    //cin >> t;
     while (t--){
         //cout << "Case-#" << cs <<": ";
         solve();
