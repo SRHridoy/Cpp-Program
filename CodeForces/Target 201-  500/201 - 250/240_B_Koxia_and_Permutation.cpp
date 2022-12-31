@@ -18,16 +18,18 @@
 using namespace std;
 
 void solve(){
-    int n, k, t;
-    cin >> n >> k >> t;
-    int z = t/k;
-    if(z>n){
-        cout << (n-1) * (n)/2 << endl;
-    }else{
-        int ans = z*n;
-        ans -= (z)*(z+1)/2;
-        cout << ans <<endl;
-    }
+    int n, k; cin >> n >> k;
+    vector<int>v(n);
+    int i = n; int j = 1;
+    while (i>=j){
+        cout << i << " ";
+        i--;
+        if(i>=j){
+            cout << j << " ";
+            j++;
+        }
+    }cout << endl;
+    
 }
 
 int32_t main(){
