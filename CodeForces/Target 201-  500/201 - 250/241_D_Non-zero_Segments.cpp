@@ -20,8 +20,20 @@ using namespace std;
 void solve(){
     int n; cin >> n;
     vector<int>v(n);
-    fo(i,n) cin >> v[i];
-    
+    int su(0),cnt(0);
+    set<int>s;
+    s.insert(0);
+    for(auto&it:v){
+        cin >> it;
+        su+=it;
+        if(s.count(su)){
+            cnt++;
+            s.clear();
+            s.insert(0);
+            s.insert(it);
+            su = it;
+        }else s.insert(su);
+    }cout << cnt;
 }
 
 int32_t main(){
