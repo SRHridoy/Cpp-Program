@@ -16,10 +16,14 @@
 #define fo(i, n)          for(int i = 0; i < n; i++)
 #define Fo(i,k,n)         for(int i = k;k<n?i<n:i>n;k<n?i++:i--)
 using namespace std;
-
+int factorial(int n){
+    if(n==0) return 1;
+    return factorial(n-1)*n;
+}
 void solve(){
-    int n; cin >> n;
-    string s; cin >> s;
+    int k; cin >> k;
+    cout << k-1 << endl;
+    
 }
 
 int32_t main(){
