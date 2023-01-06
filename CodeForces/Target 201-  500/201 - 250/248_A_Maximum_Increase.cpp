@@ -18,7 +18,22 @@
 using namespace std;
 
 void solve(){
-    int 
+    int n; cin >> n;
+    vector<int>v(n);
+    fo(i,n) cin >> v[i];
+    int l = 0, r = 1;
+    int ans = 1;
+    while (r<n){
+        if(v[r]>v[r-1]){
+            ans = max(ans,r-l+1);
+            r++;
+        }else{
+            l = r;
+            r++;
+        }
+    }cout << ans <<endl;
+    
+
 }
 
 int32_t main(){
