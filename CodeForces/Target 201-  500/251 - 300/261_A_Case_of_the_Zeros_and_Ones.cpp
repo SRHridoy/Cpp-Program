@@ -1,4 +1,4 @@
-//       ***Author: Md Sohanur Rahman Hridoy***
+//       *Author: Md Sohanur Rahman Hridoy* ​
 
 //In the name of ALLAH, the Most Gracious, the Most Merciful...
 
@@ -18,12 +18,12 @@
 using namespace std;
 
 void solve(){
-    int a,b,c;
-    cin>>a>>b>>c;
-    if((a+c)%(2*b)==0)cout<<"YES"<<endl;
-    else if((2*b-a)>0 && (2*b-a)%c==0)cout<<"YES"<<endl;
-    else if((2*b-c)>0 && (2*b-c)%a==0)cout<<"YES"<<endl;
-    else cout<<"NO"<<endl;
+    int n; cin >> n;
+    string s; cin >> s;
+    
+    int ones = count(all(s),'1');
+    int zeros = count(all(s),'0');
+    cout << abs(ones-zeros) << endl;
 }
 
 int32_t main(){
@@ -32,9 +32,9 @@ int32_t main(){
     cout.tie(NULL);
 
     int t;
-    //t = 1;
+    t = 1;
     //int cs = 1;
-    cin >> t;
+    //cin >> t;
     while (t--){
         //cout << "Case-#" << cs <<": ";
         solve();
