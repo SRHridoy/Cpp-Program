@@ -11,6 +11,12 @@ int32_t main(){
             cin >> v[i];
         }
         int sum = accumulate(v.begin(),v.end(),0);
-        cout << abs(sum) - n << endl;
+        if((sum)>=n){
+            cout << (sum)-n << endl;
+
+        }else{
+            cout <<1<< endl;
+
+        }
     }
 }
